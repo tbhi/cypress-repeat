@@ -105,7 +105,7 @@ parseArguments()
        */
       const onTestResults = (testResults) => {
         debug('is %d the last run? %o', k, isLastRun)
-        if (rerunFailedOnly && !isLastRun) {
+        if (rerunFailedOnly && !isLastRun && testResults.runs) {
           const failedSpecs = testResults.runs
             .filter((run) => run.stats.failures != 0)
             .map((run) => run.spec.relative)
