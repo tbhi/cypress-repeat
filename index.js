@@ -122,13 +122,13 @@ parseArguments()
           }
         }
 
-        if (testResults.status === 'failed') {
-          // failed to even run Cypress tests
-          if (testResults.failures) {
-            console.error(testResults.message)
-            return process.exit(testResults.failures)
-          }
-        }
+        // if (testResults.status === 'failed') {
+        //   // failed to even run Cypress tests
+        //   if (testResults.failures) {
+        //     console.error(testResults.message)
+        //     return process.exit(testResults.failures)
+        //   }
+        // }
 
         if (testResults.status === 'finished') {
           if (untilPasses) {
